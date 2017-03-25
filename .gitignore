@@ -1,0 +1,10 @@
+#User specific data#
+####################
+Beerfinder.xcodeproj/xcuserdata/
+Beerfinder.xcworkspace/xcshareddata/
+Beerfinder.xcworkspace/xcuserdata/
+
+#Pods#
+######
+Podfile.lock
+Pods/
