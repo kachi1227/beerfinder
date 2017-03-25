@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "New Group">
+   </Group>
    <FileRef
       location = "group:Beerfinder.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BeerFinderiPad/BeerFinderiPad.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
