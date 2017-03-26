@@ -9,12 +9,14 @@ def shared_pods
     pod 'Firebase'
     pod 'FirebaseMessaging'
     pod 'Firebase/Auth'
+    pod 'Firebase/Database'
     pod 'AFNetworking'
     pod 'MMDrawerController', '0.6'
     pod 'TSMessages'
     pod 'FBSDKCoreKit'
     pod 'SwiftyJSON'
     pod 'GoogleSignIn'
+    pod 'M13Checkbox'
 end
 
 project 'Beerfinder.xcodeproj'
@@ -27,6 +29,11 @@ end
 
 target 'BeerFinderiPad' do
     project 'BeerFinderiPad/BeerFinderiPad.xcodeproj'
+    shared_pods
+end
+
+target 'BeerFinderStoreDashboard' do
+    project 'BeerFinderStoreDashboard/BeerFinderStoreDashboard.xcodeproj'
     shared_pods
 end
 
