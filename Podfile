@@ -8,6 +8,7 @@ use_frameworks!
 def shared_pods
     pod 'Firebase'
     pod 'FirebaseMessaging'
+    pod 'Firebase/Auth'
     pod 'AFNetworking'
     pod 'MMDrawerController', '0.6'
     pod 'TSMessages'
