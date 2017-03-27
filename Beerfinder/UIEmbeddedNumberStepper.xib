@@ -9,14 +9,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIEmbeddedNumberStepper" customModule="Beerfinder" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="IJQ-L3-fLl"/>
+                <outlet property="decrementButton" destination="c2Q-yG-M82" id="K1A-3S-8Uv"/>
+                <outlet property="incrementButton" destination="7sC-2j-1sz" id="2QC-2F-GJ7"/>
+                <outlet property="number" destination="Ekh-N5-9sz" id="Fxh-E4-HYW"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2Q-yG-M82">
-                    <rect key="frame" x="20" y="314" width="40" height="40"/>
+                    <rect key="frame" x="5" y="314" width="40" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="10W-YE-4Lo"/>
@@ -31,9 +38,12 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="decrementTapped:" destination="-1" eventType="touchUpInside" id="c7S-VT-TeW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-2j-1sz">
-                    <rect key="frame" x="315" y="314" width="40" height="40"/>
+                    <rect key="frame" x="330" y="314" width="40" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="SJI-pC-JO6"/>
@@ -48,6 +58,9 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="incrementTapped:" destination="-1" eventType="touchUpInside" id="EuM-Lc-rLh"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekh-N5-9sz">
                     <rect key="frame" x="167" y="323" width="42" height="21"/>
@@ -60,12 +73,12 @@
             <constraints>
                 <constraint firstItem="Ekh-N5-9sz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="824-J6-BT7"/>
                 <constraint firstItem="Ekh-N5-9sz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Cyq-cN-isM"/>
-                <constraint firstAttribute="trailing" secondItem="7sC-2j-1sz" secondAttribute="trailing" constant="20" id="LtQ-ke-JZR"/>
+                <constraint firstAttribute="trailing" secondItem="7sC-2j-1sz" secondAttribute="trailing" constant="5" id="LtQ-ke-JZR"/>
                 <constraint firstItem="7sC-2j-1sz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="N2M-4F-ZGd"/>
                 <constraint firstItem="7sC-2j-1sz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ekh-N5-9sz" secondAttribute="trailing" constant="5" id="XxW-MP-EHJ"/>
                 <constraint firstItem="c2Q-yG-M82" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gyv-0B-RvQ"/>
                 <constraint firstItem="Ekh-N5-9sz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c2Q-yG-M82" secondAttribute="trailing" constant="5" id="mhW-J9-kv4"/>
-                <constraint firstItem="c2Q-yG-M82" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="zCF-Il-2fC"/>
+                <constraint firstItem="c2Q-yG-M82" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="zCF-Il-2fC"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

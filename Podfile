@@ -8,6 +8,7 @@ target 'Beerfinder' do
   # Pods for Beerfinder
     pod 'Firebase'
     pod 'FirebaseMessaging'
+    pod 'Firebase/Database'
     pod 'AFNetworking'
     pod 'MMDrawerController', '0.6'
     pod 'TSMessages'
